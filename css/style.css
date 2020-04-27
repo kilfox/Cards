@@ -1,18 +1,20 @@
-body 
+.grid
 { 
     margin: 0;
     padding: 0;
-    min-height: 100vh;
-    background: #333;
+    min-height: 50vh;
+    max-height: 100vh;
+    background: #fcfcfc;
     display:flex;
     justify-content: center;
     align-items: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: sans-serif;
+    overflow: auto;
 }
 
 .container 
 { 
-    width: 1000px;
+    width: 1350px;
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -24,24 +26,39 @@ body
 
 .container .card .face 
 { 
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 200px;
     transition: 0.5s;
+    border-radius: 3%;
 }
 
 .container .card .face.face1 
 { 
     position: relative;
-    background:#333;
+    background:#fff;
     display: flex;
     justify-content: center;
+    box-sizing: border-box;
+    box-shadow: 0 35px 50px -30px rgba(0,0,0,0.2);
     align-items: center;
     z-index: 1;
+    /* transform: translateY(100px) ; */
 }
+
+.container .card:hover .face.face1 
+{
+    background: #5933aa;
+    transform: translateY(0);
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+    box-shadow: 0 55px 50px -17px rgba(0,0,0,0.42);
+    transform: translateY(-15px);
+}
+
 .container .card .face.face1 .content 
 { 
     text-align: center ;
-    opacity: 0.2;
+    opacity: 0.5;
     transition: 0.5s;
 }
 
@@ -53,19 +70,49 @@ body
 
 .container .card .face.face1 .content img
 { 
-    max-width: 100px;
+    max-width: 110px;
+} 
+
+.container .card:hover .face.face1 .content img
+{ 
+    transform: scale(1.3, 1.3);
+    transition: 0.5s;
+} 
+
+.container .card .face.face1 .content .image 
+{ 
+    display: none;
+    z-index: 100;
+} 
+
+.container .card:hover .face.face1 .content .hiddenimg
+{ 
+    display: none;
+    
+} 
+
+.container .card:hover .face.face1 .content .image 
+{ 
+    display: inline;
+    z-index: 100;
 } 
 
 .container .card .face.face1 .content h3
 { 
     margin: 10px 0 0;
     padding: 0;
-    color: #fff;
+    color: #333;
     text-align: center;
     font-size: 1.5em;
 } 
 
-.container .card .face.face2 
+.container .card:hover .face.face1 .content h3
+{
+    transition: 0.1s;
+    color: #fff;
+}
+
+/* .container .card .face.face2 
 {
     position: relative;
     background: #fff;    
@@ -74,7 +121,18 @@ body
     align-items: center;
     padding: 20px;
     box-sizing: border-box;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 20px 50px rgba(124, 135, 141, 0.9);
+    transform: translateY(-100px);
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+}
+
+.container .card:hover .face.face2 
+{
+    width: 400px;
+    height: 400px;
+    transform: translateY(0);
+   
 }
 
 .container .card .face.face2 .content p 
@@ -91,13 +149,13 @@ text-decoration: none;
 font-weight: 900;
 color: #333;
 padding: 5px;
-border: 2px solid #4c4c4c;
-border-radius: 5%;
+border: 1px solid #333;
+/*border-radius: 5%;
 }
 
 .container .card .face.face2 .content a:hover { 
     background: #333;
     color: #fff;
     transition: ease-out 0.3s;
-}
+} */
 
