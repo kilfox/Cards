@@ -6,8 +6,25 @@
     <title>Cards</title>
     <link rel="stylesheet" href="css/style.css"/> 
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet"> 
 </head>
 <body>
+<!-- <div class="videocontainer"> 
+    <div class="banner"> 
+        <video autoplay="" muted="" loop=""> 
+            <source src="/img/ditaehapur.mp4" type="video/mp4">
+        </video>
+        <div id="bg"></div>
+
+    </div>
+</div> -->
+    <div class="logo"> 
+        <img src="/img/ut-logo-bw.svg"> 
+    </div>
+    <div class="header"> 
+        <h1>#Rri në shtëpi, ne ligjërojmë për Ty!</h1>
+    </div>
+
     <div class="grid"> 
     <div class="container"> 
         <div class="card"> 
@@ -136,7 +153,13 @@
     <!-- Next Card -->
     </div>
 </div>
-
+<script type="text/javascript"> let bg = document.querySelector('#bg');
+window.addEventListener('scroll', function(){
+    let value = window.scrollY;
+    bg.style.backgroundSize = 100 + value*30 + "px";
+    bg.style.opacity = 100 - value;
+}) 
+</script>
 <script src="js/style.js" ></script> 
 </body>
 </html>
