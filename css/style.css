@@ -1,29 +1,39 @@
-body 
-{ 
-min-height: 2000px;
-}
 
 .grid
 { 
-    margin: 0;
-    padding: 0;
-    min-height: 50vh;
+  
+    /* min-height: 50vh;
     max-height: 100vh;
     background: #fcfcfc;
     display:flex;
-    justify-content: center;
-    align-items: center;
-    font-family: sans-serif;
-    overflow: auto;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center; */
+    
 }
 
 .container 
 { 
-    width: 1350px;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
+    padding-top: 50px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 2.5rem;
+    font-family: sans-serif;
+    padding-top: 50px;;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    justify-content:space-evenly;
 }
+
+@media (min-width: 600px) {
+    .container{ grid-template-columns: repeat(3, 1fr); }
+  }
+
+  @media (min-width: 900px) {
+    .cards { grid-template-columns: repeat(3, 1fr); }
+  }
 
 .container .card { 
     position: relative;
@@ -35,13 +45,13 @@ min-height: 2000px;
     height: 200px;
     transition: 0.5s;
     border-radius: 3%;
+    padding-top: 30px;
 }
 
 .container .card .face.face1 
 { 
-    position: relative;
+    
     background:#fff;
-    display: flex;
     justify-content: center;
     box-sizing: border-box;
     box-shadow: 0 35px 50px -30px rgba(0,0,0,0.2);
@@ -75,7 +85,7 @@ min-height: 2000px;
 
 .container .card .face.face1 .content img
 { 
-    max-width: 110px;
+    max-width: 120px;
 } 
 
 .container .card:hover .face.face1 .content img
@@ -108,7 +118,7 @@ min-height: 2000px;
     padding: 0;
     color: #333;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.4em;
 } 
 
 .container .card:hover .face.face1 .content h3
@@ -202,27 +212,38 @@ padding: 0;
     mix-blend-mode: screen;
 }
 
-.header 
-{ 
-    color: #5933aa; 
-    font-family: 'Dancing Script', cursive;
-    font-size: 30px;
-     line-height: 160px; 
-     font-weight: normal; 
-     margin-bottom: 0px; 
-     margin-top: 40px; 
-     text-align: center; 
-     text-shadow: 0 1px 1px #fff;
-}
-
 .logo 
 {
-    display: block;
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
     align-items: center;
     align-content: center;
     justify-items: center;
-    transform: translateX(580%);
+    /* transform: translateX(580%); */
+    padding-top: 30px;
+    margin: auto;
 }
 
+.firstdiv 
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.header 
+{
+    color: #ff4556;
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+    line-height: 0px;
+    font-weight: normal;
+    margin-bottom: 0px;
+    margin-top: -50px;
+    text-align: center;
+    text-shadow: 0 1px 1px #fff;
+}
+
+.ftuufoto { 
+    max-width: 100px!important;
+}
