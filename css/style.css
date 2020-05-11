@@ -133,7 +133,7 @@
     padding: 0;
     color: #333;
     text-align: center;
-    font-size: 1.4em;
+    font-size: 1.0em;
 } 
 
 .container .card:hover .face.face1 .content h3
@@ -249,9 +249,22 @@ padding: 0;
 .header 
 {
     color: #ff4556;
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Marck Script', cursive;
     font-size: 20px;
-    line-height: 0px;
+    line-height: 20px;
+    font-weight: normal;
+    margin-bottom: 0px;
+    margin-top: -50px;
+    text-align: center;
+    text-shadow: 0 1px 1px #fff;
+}
+
+.headertwo
+{
+    color: #333;
+    font-family: 'Marck Script', cursive;
+    font-size: 18px;
+    line-height: 15px;
     font-weight: normal;
     margin-bottom: 0px;
     margin-top: -50px;
